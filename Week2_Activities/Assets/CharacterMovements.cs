@@ -16,10 +16,10 @@ public class CharacterMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxisRaw("Horizontal"))
-        {
+        //if (Input.GetAxisRaw("Horizontal"))
+        //{
 
-        }
+        //}
 
 
     }
