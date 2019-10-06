@@ -63,15 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CharacterMovements.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+    <Compile Include="Assets\Let's Try Shooter\Scripts\CompletedScripts\RayCastShootComplete.cs" />
+    <Compile Include="Assets\Let's Try Shooter\Scripts\CompletedScripts\RayViewerComplete.cs" />
+    <Compile Include="Assets\Let's Try Shooter\Scripts\CompletedScripts\ShootableBox.cs" />
+    <Compile Include="Assets\Let's Try Shooter\Scripts\RaycastShoot.cs" />
+    <Compile Include="Assets\Let's Try Shooter\Scripts\RayViewer.cs" />
+    <Compile Include="Assets\Raycast.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/coypu/Documents/GitHub/AINT254-Activites/Week2_Activities/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -98,6 +95,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/coypu/Documents/GitHub/AINT254-Activites/Week2_Activities/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/coypu/Documents/GitHub/AINT254-Activites/Week2_Activities/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>C:/Users/coypu/Documents/GitHub/AINT254-Activites/Week2_Activities/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
