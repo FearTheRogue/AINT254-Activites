@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Let's Try Shooter/Scenes/ShootingWithRaycasts.unity
+- path: Assets/Scenes/Whecking Ball.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
