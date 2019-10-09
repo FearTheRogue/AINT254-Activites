@@ -16,6 +16,9 @@ public class RaycastShoot : MonoBehaviour
     private LineRenderer lazerLine;
     private float nextFire;
 
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+
     void Start()
     {
         lazerLine = GetComponent<LineRenderer>();
@@ -29,10 +32,14 @@ public class RaycastShoot : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
 
-            StartCoroutine(ShotEffect());
+            //for (int i = 0; i < bulletSpawn.Length; i++)
+            //{
+                //Instantiate(bulletPrefab, bulletSpawn[i].position, bulletSpawn[i].rotation);
+                StartCoroutine(ShotEffect());
+            //}
 
             Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));
-
+Instantiate(bulletPrefab, gunEnd.transform.position, fpsCam.transform.rotation);
             RaycastHit hit;
 
             lazerLine.SetPosition(0, gunEnd.position);
@@ -40,6 +47,8 @@ public class RaycastShoot : MonoBehaviour
             if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
             {
                 lazerLine.SetPosition(1, hit.point);
+
+                
 
                 ShootableBox health = hit.collider.GetComponent<ShootableBox>();
 
@@ -62,6 +71,8 @@ public class RaycastShoot : MonoBehaviour
 
     IEnumerator ShotEffect()
     {
+        
+
         gunAudio.Play();
 
         lazerLine.enabled = true;
