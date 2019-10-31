@@ -4,6 +4,8 @@ using System.Collections;
 public class Group : MonoBehaviour
 {
     private CanvasGroup m_group;
+    [SerializeField]
+    private SoundManager m_soundManager;
 
 	// Use this for initialization
 	void Start ()
@@ -21,10 +23,12 @@ public class Group : MonoBehaviour
             if(m_group.alpha == 0)
             {
                 m_group.alpha = 1;
+                m_soundManager.MenuModeOn();
             }
             else
             {
                 m_group.alpha = 0;
+                m_soundManager.GameModeOn();
             }
         }
 	}
