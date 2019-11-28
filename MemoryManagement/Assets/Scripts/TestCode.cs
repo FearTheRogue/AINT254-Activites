@@ -25,6 +25,16 @@ public class TestCode : MonoBehaviour
 
             m_gameObjects[i].SetActive(false);  
         }
+
+        Debug.Log(CompareStrings("Yes", "No"));
+
+        string val1 = "Yes";
+        string val2 = "Yes";
+
+        int string1 = val1.GetHashCode();
+        int string2 = val2.GetHashCode();
+
+        Debug.Log(CompareStrings(string1, string2));
     }
     
     void OptimisedInstantiateTest()
@@ -85,5 +95,49 @@ public class TestCode : MonoBehaviour
         //InstantiateTest();
 
         OptimisedInstantiateTest();
+    }
+
+    private float[] RandomValues(int _amount)
+    {
+        var numberList = new float[_amount];
+
+        for (int i = 0; i < _amount; i++)
+        {
+            numberList[i] = Random.value;
+        }
+
+        return numberList;
+    }
+
+    private void OptimisedRandomValues(float[] _arrayToFill)
+    {
+        for (int i = 0; i < _arrayToFill.Length; i++)
+        {
+            _arrayToFill[i] = Random.value;
+        }
+    }
+
+    private bool CompareStrings(string _string1, string _string2)
+    {
+        if(_string1 == _string2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool CompareStrings(int _string1, int _string2)
+    {
+        if (_string1 == _string2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
